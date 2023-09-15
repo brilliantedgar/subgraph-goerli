@@ -1,14 +1,14 @@
 specVersion: 0.0.2
-description: Quickswap is a decentralized protocol for automated token exchange on mumbai.
+description: Quickswap is a decentralized protocol for automated token exchange on goerli-base.
 repository: https://github.com/QuickSwap/QuickSwap-subgraph.git
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mumbai
+    network: base-testnet
     source:
-      address: '0x2900A08e946F2C5b0f53f4f6BC917c1CF35d0322'
+      address: '0x23ed59208412e5968121ef59790449dd85340d85'
       abi: Factory
       startBlock: 5484576
     mapping:
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: mumbai
+    network: base-testnet
     source:
       abi: Pair
     mapping:
